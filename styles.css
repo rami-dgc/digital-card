@@ -1,0 +1,141 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Profile card styling */
+.profile-card {
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;  /* 90% width for mobile responsiveness */
+    max-width: 400px;  /* Max width for larger screens */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Header styling */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Profile information styling */
+.profile-info {
+    padding: 20px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.profile-info h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.profile-info .title {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.contact-info, .email {
+    color: #444;
+    font-size: 14px;
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Links styling */
+.links {
+    padding: 20px 10px;
+}
+
+.link-button {
+    display: block;
+    background-color: #f3f3f3;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Add to contacts button */
+.add-contact {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-contact:hover {
+    background-color: #444;
+}
+
+/* Media query for smaller mobile devices */
+@media (max-width: 600px) {
+    .profile-card {
+        width: 100%; /* Full width on small devices */
+        margin: 0 10px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .profile-info h3 {
+        font-size: 16px;
+    }
+
+    .profile-picture {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-info, .email {
+        font-size: 13px;
+    }
+
+    .link-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .add-contact {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
