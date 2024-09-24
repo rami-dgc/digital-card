@@ -44,7 +44,7 @@ body {
     height: 80px;
     object-fit: cover;
     position: absolute;
-    top: 200px;  /* Increase top to align the profile picture with the new header height */
+    top: 280px;  /* Increase top to align the profile picture with the new header height */
     left: 20px;  /* Align the picture 20px from the left */
     border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
     z-index: 1;  /* Ensure the picture is above the header */
