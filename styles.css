@@ -1,7 +1,10 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 /* General body styling */
 body {
-    font-family: 'Montserrat', sans-serif;  /* Changed font to Montserrat */
-    background-color: #EEEEEE;               /* Corrected background color */
+    font-family: 'Poppins', sans-serif;  /* Changed font to Poppins */
+    background-color: #EEEEEE;           /* Corrected background color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,19 +61,52 @@ body {
 }
 
 .profile-info h3 {
-    margin: 10px 0 5px;
+    margin: 0px 0 5px;          /* Original bottom margin */
     font-size: 18px;
 }
 
 .profile-info .title {
     color: #777;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;         /* Original bottom margin */
 }
 
-.contact-info, .email {
+.contact-info {
     color: #444;
     font-size: 14px;
+    /* No margin-top applied here to maintain existing spacing */
+}
+
+.email {
+    color: #444;
+    font-size: 14px;
+    margin-top: 0px;            /* Reduced top margin from previous adjustments */
+}
+
+/* **New Styles for Website Link** */
+.website {
+    color: #444;
+    font-size: 14px;
+    margin-top: 5px;            /* Adjusted top margin for consistent spacing */
+}
+
+.website a {
+    color: black !important;               /* Sets the website link color to black */
+    text-decoration: none;      /* Removes the underline from the website link */
+}
+
+.website a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* **Styles for Email Hyperlink** */
+.email a {
+    color: black !important;               /* Sets the email link color to black */
+    text-decoration: none;      /* Removes the underline from the email link */
+}
+
+.email a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
 }
 
 /* Social icons styling */
@@ -144,6 +180,7 @@ body {
 
     .profile-info h3 {
         font-size: 16px;
+        margin: 0px 0 2px;        /* Adjusted margin for smaller screens */
     }
 
     .profile-picture {
@@ -154,12 +191,23 @@ body {
         transform: none;            /* Remove horizontal centering */
     }
 
-    .contact-info, .email {
+    .contact-info, .email, .website {
         font-size: 13px;
+        margin-top: 0px;            /* Ensure no extra space above email and website on mobile */
     }
 
     .link-button, .add-contact {
         font-size: 12px;
         padding: 8px;
+    }
+
+    /* **Ensure Email and Website Hyperlink Styling on Mobile** */
+    .email a, .website a {
+        color: black !important;               /* Maintains black color on mobile */
+        text-decoration: none;      /* Removes underline on mobile */
+    }
+
+    .email a:hover, .website a:hover {
+        text-decoration: underline; /* Adds underline on hover on mobile */
     }
 }
