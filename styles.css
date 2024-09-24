@@ -20,16 +20,15 @@ body {
     overflow: hidden;
 }
 
-/* Header styling */
+/* Header with image styling */
 .header {
     background-color: #333;
-    color: white;
-    padding: 20px 0;
+    padding: 0;  /* No padding for the image */
 }
 
-.header h2 {
-    margin: 0;
-    font-size: 24px;
+.header-image {
+    width: 100%;  /* Make the image fill the header width */
+    height: auto;  /* Keep image aspect ratio */
 }
 
 /* Profile information styling */
@@ -110,10 +109,6 @@ body {
     .profile-card {
         width: 100%; /* Full width on small devices */
         margin: 0 10px;
-    }
-
-    .header h2 {
-        font-size: 20px;
     }
 
     .profile-info h3 {
