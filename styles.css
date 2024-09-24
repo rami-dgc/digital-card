@@ -149,7 +149,7 @@ body {
     .profile-picture {
         width: 70px;                /* Reduced size for mobile */
         height: 70px;
-        top: 23.5%;                  /* Adjusted top position (moved up by 40px) */
+        top: 30%;                  /* Adjusted top position (moved up by 40px) */
         left: 5%;                   /* Maintain left alignment */
         transform: none;            /* Remove horizontal centering */
     }
