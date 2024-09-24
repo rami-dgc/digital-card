@@ -149,9 +149,9 @@ body {
     .profile-picture {
         width: 70px;  /* Reduced size for mobile */
         height: 70px;
-        top: calc(120px - 35px);  /* header height (120px) - half of profile picture height (35px) = 85px */
-        left: 50%;  /* Center horizontally */
-        transform: translate(-50%, 0);  /* Adjust to center the profile picture */
+        top: 85px;  /* Adjusted top position */
+        left: 5%;  /* Maintain left alignment */
+        transform: none;  /* Remove horizontal centering */
     }
 
     .contact-info, .email {
