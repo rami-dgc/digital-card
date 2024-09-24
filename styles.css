@@ -46,7 +46,6 @@ body {
     position: absolute;
     top: 160px;  /* Increase top to align the profile picture with the new header height */
     left: 20px;  /* Align the picture 20px from the left */
-    transform: translateY(50%);  /* Shift the image up by half its height */
     border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
     z-index: 1;  /* Ensure the picture is above the header */
 }
