@@ -28,7 +28,7 @@ body {
     background-color: #333;
     padding: 0;  /* No padding for the image */
     position: relative;  /* Set relative position for the profile picture to overlap */
-    height: 100px;  /* Height of the header */
+    height: 120px;  /* Increased height to accommodate profile picture */
     z-index: 0;  /* Ensure the header is behind the profile picture */
 }
 
@@ -44,7 +44,7 @@ body {
     height: 80px;
     object-fit: cover;
     position: absolute;
-    top: 50px;  /* Position the center of the picture to the bottom of the header */
+    top: 60px;  /* Increase top to align the profile picture with the new header height */
     left: 20px;  /* Align the picture 20px from the left */
     transform: translateY(50%);  /* Shift the image up by half its height */
     border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
@@ -54,7 +54,7 @@ body {
 /* Profile information styling */
 .profile-info {
     padding: 20px;
-    margin-top: 60px;  /* Increased margin to prevent overlap with the profile picture */
+    margin-top: 80px;  /* Increased margin to ensure space between the picture and content */
 }
 
 .profile-info h3 {
@@ -150,7 +150,7 @@ body {
         width: 85px;
         height: 85px;
         left: 10px;  /* Adjust left position for smaller screens */
-        top: 50px;  /* Adjust position for smaller screens */
+        top: 60px;  /* Adjust position for smaller screens */
         transform: translateY(50%);  /* Adjust translate for smaller screens */
     }
 
