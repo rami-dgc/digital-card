@@ -19,15 +19,12 @@ body {
     text-align: center;
     overflow: hidden;
     padding-bottom: 50px;  /* Increased padding-bottom for more space */
-    position: relative;  /* Ensure relative positioning to contain absolute elements */
 }
 
 /* Header with image styling */
 .header {
     background-color: #333;
     padding: 0;  /* No padding for the image */
-    position: relative;  /* Set relative position for the profile picture to overlap */
-    height: 100px;  /* Height of the header */
 }
 
 .header-image {
@@ -35,24 +32,16 @@ body {
     height: auto;  /* Keep image aspect ratio */
 }
 
-/* Profile picture styling - aligned center to the bottom of the header */
+/* Profile information styling */
+.profile-info {
+    padding: 20px;
+}
+
 .profile-picture {
     border-radius: 50%;
     width: 80px;
     height: 80px;
     object-fit: cover;
-    position: absolute;
-    top: 50px;  /* Position the center of the picture to the bottom of the header */
-    left: 20px;  /* Align the picture 20px from the left */
-    transform: translateY(50%);  /* Shift the image up by half its height */
-    border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
-    z-index: 1;  /* Ensure the picture is above the header */
-}
-
-/* Profile information styling */
-.profile-info {
-    padding: 20px;
-    margin-top: 40px;  /* Adjust margin to prevent text from overlapping the profile picture */
 }
 
 .profile-info h3 {
@@ -147,9 +136,6 @@ body {
     .profile-picture {
         width: 85px;
         height: 85px;
-        left: 10px;  /* Adjust left position for smaller screens */
-        top: 50px;  /* Adjust position for smaller screens */
-        transform: translateY(50%);  /* Adjust translate for smaller screens */
     }
 
     .contact-info, .email {
