@@ -1,7 +1,7 @@
 /* General body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;  /* Changed font to Montserrat */
+    background-color: #EEEEEE;  /* Corrected background color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body {
 
 /* Profile card styling */
 .profile-card {
-    background-color: white;
+    background-color: #EEEEEE;
     border-radius: 20px;
     width: 90%;  /* 90% width for mobile responsiveness */
     max-width: 400px;  /* Max width for larger screens */
@@ -19,12 +19,15 @@ body {
     text-align: center;
     overflow: hidden;
     padding-bottom: 50px;  /* Increased padding-bottom for more space */
+    position: relative;  /* Ensure relative positioning to contain absolute elements */
 }
 
 /* Header with image styling */
 .header {
     background-color: #333;
     padding: 0;  /* No padding for the image */
+    position: relative;  /* Set relative position for the profile picture to overlap */
+    height: 100px;  /* Adjust height to fit the profile picture overlap */
 }
 
 .header-image {
@@ -32,16 +35,23 @@ body {
     height: auto;  /* Keep image aspect ratio */
 }
 
-/* Profile information styling */
-.profile-info {
-    padding: 20px;
-}
-
+/* Profile picture styling - half in body and half in header, aligned to the left */
 .profile-picture {
     border-radius: 50%;
     width: 80px;
     height: 80px;
     object-fit: cover;
+    position: absolute;
+    top: 50px;  /* Move the profile picture half into the header */
+    left: 20px;  /* Align the profile picture to the left */
+    border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
+    z-index: 1;  /* Ensure the picture is above the header */
+}
+
+/* Profile information styling */
+.profile-info {
+    padding: 20px;
+    margin-top: 40px;  /* Adjust margin to prevent text from overlapping the profile picture */
 }
 
 .profile-info h3 {
@@ -72,37 +82,54 @@ body {
     height: 24px;
 }
 
-/* Links styling */
+/* Links and buttons styling */
 .links {
     padding: 20px 10px;
 }
 
-.link-button {
+.link-button, .add-contact {
     display: block;
     background-color: #f3f3f3;
     border: none;
-    padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;
     color: #333;
     text-decoration: none;
     font-size: 14px;
+    width: 100%;  /* Ensure all buttons take up the same width */
+    max-width: 300px;  /* Limit width on larger screens */
+    margin: 0 auto;  /* Center the buttons */
+    padding: 10px;
 }
 
-/* Add to contacts button */
+/* Align link-button text to the left */
+.link-button {
+    text-align: left;
+}
+
+/* Adding extra bottom margin for the first button */
+.link-button:first-of-type {
+    margin-bottom: 20px;  /* Add extra bottom space to the first button */
+    border: 2px solid #333;  /* Add border to the first button */
+}
+
+.link-button:nth-of-type(2) {
+    border: 2px solid #333;  /* Add border to the second button */
+}
+
+/* Align add-contact text to the center */
 .add-contact {
     background-color: #333;
     color: white;
-    padding: 15px;  /* Increased padding for a bigger button */
-    border: none;
-    width: 100%;
-    border-radius: 0 0 20px 20px;
-    cursor: pointer;
-    font-size: 18px;  /* Increased font size */
+    text-align: center;  /* Center-align the text in add-contact */
 }
 
+.link-button:hover { 
+  background-color: #999;
+} 
+
 .add-contact:hover {
-    background-color: #444;
+    background-color: #111;
 }
 
 /* Media query for smaller mobile devices */
@@ -117,21 +144,17 @@ body {
     }
 
     .profile-picture {
-        width: 70px;
-        height: 70px;
+        width: 85px;
+        height: 85px;
+        left: 10px;  /* Adjust left position for smaller screens */
     }
 
     .contact-info, .email {
         font-size: 13px;
     }
 
-    .link-button {
+    .link-button, .add-contact {
         font-size: 12px;
         padding: 8px;
-    }
-
-    .add-contact {
-        font-size: 16px;  /* Adjusted font size for mobile */
-        padding: 12px;  /* Adjusted padding for mobile */
     }
 }
