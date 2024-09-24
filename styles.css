@@ -40,12 +40,12 @@ body {
 /* Profile picture styling - aligned center to overlap half with the header */
 .profile-picture {
     border-radius: 50%;
-    width: 90px;  
-    height: 90px;  
+    width: 90px;  /* Increased size for better visibility on desktop */
+    height: 90px;
     object-fit: cover;
     position: absolute;
-    top: 175px;  /* Adjusted top to (120px header height - 30px half of profile picture height) */
-    left: 65px;  /* Center horizontally */
+    top: calc(120px - 45px);  /* header height (120px) - half of profile picture height (45px) = 75px */
+    left: 50%;  /* Center horizontally */
     transform: translate(-50%, 0);  /* Adjust to center the profile picture */
     border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
     z-index: 1;  /* Ensure the picture is above the header */
@@ -54,7 +54,7 @@ body {
 /* Profile information styling */
 .profile-info {
     padding: 20px;
-    margin-top: 80px;  /* Adjusted margin to account for the overlapping profile picture */
+    margin-top: 60px;  /* Adjusted margin to account for the overlapping profile picture */
 }
 
 .profile-info h3 {
@@ -147,9 +147,9 @@ body {
     }
 
     .profile-picture {
-        width: 70px;  /* Slightly increased size for better visibility on small screens */
+        width: 70px;  /* Reduced size for mobile */
         height: 70px;
-        top: 90px;  /* Adjusted to maintain half overlap on smaller screens */
+        top: calc(120px - 35px);  /* header height (120px) - half of profile picture height (35px) = 85px */
         left: 50%;  /* Center horizontally */
         transform: translate(-50%, 0);  /* Adjust to center the profile picture */
     }
