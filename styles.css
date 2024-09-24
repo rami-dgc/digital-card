@@ -37,15 +37,16 @@ body {
     height: auto;  /* Keep image aspect ratio */
 }
 
-/* Profile picture styling - aligned center to the bottom of the header */
+/* Profile picture styling - aligned center to overlap half with the header */
 .profile-picture {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 90px;  
+    height: 90px;  
     object-fit: cover;
     position: absolute;
-    top: 280px;  /* Increase top to align the profile picture with the new header height */
-    left: 20px;  /* Align the picture 20px from the left */
+    top: 175px;  /* Adjusted top to (120px header height - 30px half of profile picture height) */
+    left: 65px;  /* Center horizontally */
+    transform: translate(-50%, 0);  /* Adjust to center the profile picture */
     border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
     z-index: 1;  /* Ensure the picture is above the header */
 }
@@ -53,7 +54,7 @@ body {
 /* Profile information styling */
 .profile-info {
     padding: 20px;
-    margin-top: 200px;  /* Increased margin to ensure space between the picture and content */
+    margin-top: 80px;  /* Adjusted margin to account for the overlapping profile picture */
 }
 
 .profile-info h3 {
@@ -146,11 +147,11 @@ body {
     }
 
     .profile-picture {
-        width: 85px;
-        height: 85px;
-        left: 10px;  /* Adjust left position for smaller screens */
-        top: 60px;  /* Adjust position for smaller screens */
-        transform: translateY(50%);  /* Adjust translate for smaller screens */
+        width: 70px;  /* Slightly increased size for better visibility on small screens */
+        height: 70px;
+        top: 90px;  /* Adjusted to maintain half overlap on smaller screens */
+        left: 50%;  /* Center horizontally */
+        transform: translate(-50%, 0);  /* Adjust to center the profile picture */
     }
 
     .contact-info, .email {
