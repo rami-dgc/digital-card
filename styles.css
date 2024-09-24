@@ -1,4 +1,82 @@
-/* **Styles for Phone Number Hyperlink** */
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;  /* Changed font to Poppins */
+    background-color: #EEEEEE;           /* Corrected background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Profile card styling */
+.profile-card {
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    width: 90%;                 /* 90% width for mobile responsiveness */
+    max-width: 400px;           /* Max width for larger screens */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    overflow: hidden;
+    padding-bottom: 50px;      /* Increased padding-bottom for more space */
+    position: relative;         /* Ensure relative positioning to contain absolute elements */
+    z-index: 1;                 /* Ensure the profile card is above the header */
+}
+
+/* Header with image styling */
+.header {
+    background-color: #333;
+    padding: 0;                 /* No padding for the image */
+    position: relative;         /* Set relative position for the profile picture to overlap */
+    height: 120px;              /* Increased height to accommodate profile picture */
+    z-index: 0;                 /* Ensure the header is behind the profile picture */
+}
+
+.header-image {
+    width: 100%;                /* Make the image fill the header width */
+    height: auto;               /* Keep image aspect ratio */
+}
+
+/* Profile picture styling - aligned left to overlap half with the header */
+.profile-picture {
+    border-radius: 50%;
+    width: 90px;                /* Increased size for better visibility on desktop */
+    height: 90px;
+    object-fit: cover;
+    position: absolute;
+    top: 180px;
+    left: 5%;  
+    border: 3px solid #EEEEEE;  /* Add a border for better visual separation */
+    z-index: 1;                 /* Ensure the picture is above the header */
+}
+
+/* Profile information styling */
+.profile-info {
+    padding: 20px;
+    margin-top: 140px;          /* Adjusted margin to account for the overlapping profile picture */
+    margin-left: 10px;
+}
+
+.profile-info h3 {
+    margin: 0px 0 5px;          /* Original bottom margin */
+    font-size: 18px;
+}
+
+.profile-info .title {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 0px;         /* Original bottom margin */
+}
+
+.contact-info {
+    color: #444;
+    font-size: 14px;
+    /* No margin-top applied here to maintain existing spacing */
+}
+
 .contact-info a {
     color: black !important;               /* Sets the phone number link color to black */
     text-decoration: none;                 /* Removes the underline from the phone number link */
@@ -6,4 +84,139 @@
 
 .contact-info a:hover {
     text-decoration: underline;            /* Adds underline on hover for better UX */
+}
+
+.email {
+    color: #444;
+    font-size: 14px;
+    margin-top: 0px;            /* Reduced top margin from previous adjustments */
+}
+
+/* **Styles for Email Hyperlink** */
+.email a {
+    color: black !important;               /* Sets the email link color to black */
+    text-decoration: none;      /* Removes the underline from the email link */
+}
+
+.email a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* **New Styles for Website Link** */
+.website {
+    color: #444;
+    font-size: 14px;
+    margin-top: 5px;            /* Adjusted top margin for consistent spacing */
+}
+
+.website a {
+    color: black !important;               /* Sets the website link color to black */
+    text-decoration: none;      /* Removes the underline from the website link */
+}
+
+.website a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Links and buttons styling */
+.links {
+    padding: 20px 10px;
+}
+
+.link-button, .add-contact {
+    display: block;
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    width: 100%;               /* Ensure all buttons take up the same width */
+    max-width: 300px;          /* Limit width on larger screens */
+    margin: 0 auto;            /* Center the buttons */
+    padding: 10px;
+}
+
+/* Align link-button text to the left */
+.link-button {
+    text-align: left;
+}
+
+/* Adding extra bottom margin for the first button */
+.link-button:first-of-type {
+    margin-bottom: 20px;       /* Add extra bottom space to the first button */
+    border: 2px solid #333;    /* Add border to the first button */
+}
+
+.link-button:nth-of-type(2) {
+    border: 2px solid #333;    /* Add border to the second button */
+}
+
+/* Align add-contact text to the center */
+.add-contact {
+    background-color: #333;
+    color: white;
+    text-align: center;          /* Center-align the text in add-contact */
+}
+
+.link-button:hover { 
+    background-color: #999;
+} 
+
+.add-contact:hover {
+    background-color: #111;
+}
+
+/* Media query for smaller mobile devices */
+@media (max-width: 600px) {
+    .profile-card {
+        width: 100%;               /* Full width on small devices */
+        margin: 0 10px;
+    }
+
+    .profile-info h3 {
+        font-size: 16px;
+        margin: 0px 0 2px;        /* Adjusted margin for smaller screens */
+    }
+
+    .profile-picture {
+        width: 70px;                /* Reduced size for mobile */
+        height: 70px;
+        top: 25%;                  /* Adjusted top position (moved up by 40px) */
+        left: 5%;                   /* Maintain left alignment */
+        transform: none;            /* Remove horizontal centering */
+    }
+
+    .contact-info, .email, .website {
+        font-size: 13px;
+        margin-top: 0px;            /* Ensure no extra space above email and website on mobile */
+    }
+
+    .link-button, .add-contact {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* **Ensure Email, Website, and Phone Hyperlink Styling on Mobile** */
+    .email a, .website a, .contact-info a {
+        color: black !important;               /* Maintains black color on mobile */
+        text-decoration: none;      /* Removes underline on mobile */
+    }
+
+    .email a:hover, .website a:hover, .contact-info a:hover {
+        text-decoration: underline; /* Adds underline on hover on mobile */
+    }
 }
