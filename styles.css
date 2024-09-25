@@ -77,6 +77,7 @@ body {
     /* No margin-top applied here to maintain existing spacing */
 }
 
+/* Styles for Phone Number Hyperlink */
 .contact-info a {
     color: black !important;               /* Sets the phone number link color to black */
     text-decoration: none;                 /* Removes the underline from the phone number link */
@@ -92,7 +93,7 @@ body {
     margin-top: 0px;            /* Reduced top margin from previous adjustments */
 }
 
-/* **Styles for Email Hyperlink** */
+/* Styles for Email Hyperlink */
 .email a {
     color: black !important;               /* Sets the email link color to black */
     text-decoration: none;      /* Removes the underline from the email link */
@@ -102,7 +103,7 @@ body {
     text-decoration: underline; /* Adds underline on hover for better UX */
 }
 
-/* **New Styles for Website Link** */
+/* New Styles for Website Link */
 .website {
     color: #444;
     font-size: 14px;
@@ -128,6 +129,13 @@ body {
 .social-icons img {
     width: 24px;
     height: 24px;
+    filter: grayscale(100%); /* Converts icons to greyscale */
+    transition: filter 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Optional: Remove greyscale on hover for interactivity */
+.social-icons img:hover {
+    filter: grayscale(0%);
 }
 
 /* Links and buttons styling */
@@ -180,6 +188,23 @@ body {
     background-color: #111;
 }
 
+/* Attribution styling */
+.attribution {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: #777;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
 /* Media query for smaller mobile devices */
 @media (max-width: 600px) {
     .profile-card {
@@ -210,7 +235,7 @@ body {
         padding: 8px;
     }
 
-    /* **Ensure Email, Website, and Phone Hyperlink Styling on Mobile** */
+    /* Ensure Email, Website, and Phone Hyperlink Styling on Mobile */
     .email a, .website a, .contact-info a {
         color: black !important;               /* Maintains black color on mobile */
         text-decoration: none;      /* Removes underline on mobile */
@@ -218,5 +243,11 @@ body {
 
     .email a:hover, .website a:hover, .contact-info a:hover {
         text-decoration: underline; /* Adds underline on hover on mobile */
+    }
+    
+    /* Optional: Focus Styles for Accessibility */
+    .social-icons a:focus, .link-button:focus, .add-contact:focus {
+        outline: 2px dashed #333;
+        outline-offset: 2px;
     }
 }
